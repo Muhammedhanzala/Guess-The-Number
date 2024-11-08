@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="guess my number/style.css"/>
+  </head>
+  <body>
+    <div id="top">
+      <button onclick="again()" aria-label="Start a new game">Again!</button>
+      <p>Guess a number between 1 and 20</p>
+    </div>
+    
+    <h1>Guess My Number!</h1>
+    <h2>Level: <span id="level">1</span></h2>
+    
+    <div class="line"></div>
+    
+    <div id="questionMarkbox">?</div>
+    
+    <div id="main">
+      <div id="leftArea" class="mainChild">
+        <input oninput="inputChange()" id="userInput" type="number" placeholder="Enter a number" aria-label="Enter your guess" />
+        <button onclick="check()" aria-label="Check your guess">Check</button>
+      </div>
+      <div id="rightArea" class="mainChild">
+        <p id="replaceableText">Start guessing...</p>
+        <p>Score: <span id="score">20</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+      </div>
+    </div>
+    
+    <script src="guess my number/app.js"></script>
+  </body>
+</html>
