@@ -16,7 +16,6 @@ const questionMarkbox = document.querySelector("#questionMarkbox");
 levelHtml.innerHTML = level;
 
 function check() {
-  console.log(userInput.value, "===>> chala");
   if (userInput.value > 20) {
     replaceableText.innerHTML =
       "bhai saab 20 sey ziyaada ka to option hi nahin hai, khamakha point zaaaya hoga";
@@ -24,7 +23,6 @@ function check() {
   }
   if (level > 1) {
     level2Selection--;
-    console.log(level2Selection, "==>> level2Selection");
     questionMarkbox.innerHTML = level2Selection;
     if (level2Selection < 0) {
       winningNumber = Math.ceil(Math.random() * 20);
@@ -77,7 +75,6 @@ function check() {
 }
 
 function inputChange() {
-  console.log(userInput.value.length, );
   if (userInput.value.length > 2) {
     userInput.value = userInput.value.slice(0, 2);
   }
